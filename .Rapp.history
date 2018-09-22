@@ -1,0 +1,236 @@
+3
+makeCacheMatrix <- function(x = matrix()) {#
+            inverse_m <- NULL#
+            set <- function(y) {#
+                    x <<- y#
+                    inverse_m <<- NULL#
+            }#
+            get <- function() x#
+            setinverse <- function(inverse) inverse_m <<- inverse#
+            getinverse <- function() inverse_m#
+            list(set = set, get = get,#
+                 setinverse = setinverse,#
+                 getinverse = getinverse)#
+}
+cacheSolve <- function(x, ...) {#
+        ## Return a matrix that is the inverse of 'x'#
+            inverse_m <- x$getinverse()#
+            if(!is.null(inverse_m)) {#
+                    message("getting cached data")#
+                    return(inverse_m)#
+            }#
+            data <- x$get()#
+            inverse_m <- solve(data, ...)#
+            x$setmean(inverse_m)#
+            inverse_m#
+}
+x<-matrix(1:6, nrow = 2, ncol = 3)
+x
+makeCacheMatrix(x)
+cacheSolve(x)
+debug(cacheSolve)
+cacheSolve(x)
+n
+x$getinverse()
+x$get()
+makeCacheMatrix(x)$getinverse
+makeCacheMatrix(x)$getinverse()
+?debug
+undebug(cacheSolve)
+cacheSolve(makeCacheMatrix(x))
+x<-matirx(1:9, nrow = 3, ncol = 3)
+x<-matrix(1:9, nrow = 3, ncol = 3)
+x
+cacheSolve(makeCacheMatrix(x))
+x<-matrix(1:10, nrow = 3, ncol = 3)
+x<-matrix(1:9, nrow = 3, ncol = 3)
+cacheSolve(makeCacheMatrix(x))
+solve(x)
+x
+?solve
+hilbert <- function(n) { i <- 1:n; 1 / outer(i - 1, i, "+") }#
+h8 <- hilbert(8); h8
+x
+x<-matrix(c(1,0,0,1),nrow = 2, nxol = 2)
+x<-matrix(c(1,0,0,1),nrow = 2, ncol = 2)
+x
+solve(x)
+cacheSolve(makeCacheMatrix(x))
+xx<- makeCacheMatrix(x)
+cacheSolve(xx)
+xx$get
+xx$get()
+xx$getinverse()
+solve(xx$get(),...)
+solve(xx$get(), ...)
+solve(xx$get())
+cacheSolve <- function(x, ...) {#
+        ## Return a matrix that is the inverse of 'x'#
+            inverse_m <- x$getinverse()#
+            if(!is.null(inverse_m)) {#
+                    message("getting cached data")#
+                    return(inverse_m)#
+            }#
+            data <- x$get()#
+            inverse_m <- solve(data)#
+            x$setmean(inverse_m)#
+            inverse_m#
+}
+cacheSolve(xx)
+solve(xx)
+xx
+x
+solve(xx$get())
+cacheSolve <- function(x, ...) {#
+        ## Return a matrix that is the inverse of 'x'#
+            inverse_m <- x$getinverse()#
+            if(!is.null(inverse_m)) {#
+                    message("getting cached data")#
+                    return(inverse_m)#
+            }#
+            data <- x$get()#
+            inverse_m <- solve(data)#
+            x$inverse(inverse_m)#
+            inverse_m#
+}
+cacheSolve(xx)
+solve(xx$get())
+xxx<-solve(xx$get())
+cacheSolve <- function(x, ...) {#
+        ## Return a matrix that is the inverse of 'x'#
+            inverse_m <- x$getinverse()#
+            if(!is.null(inverse_m)) {#
+                    message("getting cached data")#
+                    return(inverse_m)#
+            }#
+            data <- x$get()#
+            inverse_m <- solve(data)#
+            x$setinverse(inverse_m)#
+            inverse_m#
+}
+cacheSolve(xx)
+makeCacheMatrix <- function(x = matrix()) {#
+  m <- NULL#
+  set <- function(y) {#
+    x <<- y#
+    m <<- NULL#
+  }#
+  get <- function() x#
+  setinverse <- function(inverse) m <<- inverse#
+  getinverse <- function() m#
+  list(set = set, get = get,#
+       setinverse = setinverse,#
+       getinverse = getinverse)#
+}
+cacheSolve <- function(x, ...) {#
+        ## Return a matrix that is the inverse of 'x'#
+m<-x$getinverse()#
+if(!is.null(m)) {#
+  message("getting cached data")#
+  return(m)#
+}#
+  data <- x$get()#
+  m <- solve(data, ...)#
+  x$setinverse(m)#
+  m#
+}
+x
+makeCacheMatrix(x)
+xx<-makeCacheMatrix(x)
+cacheSolve(xx)
+cacheSolve <- function(x, ...) {#
+        ## Return a matrix that is the inverse of 'x'#
+            inverse_m <- x$getinverse()#
+            if(!is.null(inverse_m)) {#
+                    message("getting cached data")#
+                    return(inverse_m)#
+            }#
+            data <- x$get()#
+            inverse_m <- solve(data)#
+            x$setinverse(inverse_m)#
+            inverse_m#
+}
+cacheSolve(xx)
+xx<-makeCacheMatrix(x)
+cacheSolve(xx)
+cacheSolve <- function(x, ...) {#
+        ## Return a matrix that is the inverse of 'x'#
+            inverse_m <- x$getinverse()#
+            if(!is.null(inverse_m)) {#
+                    message("getting cached data")#
+                    return(inverse_m)#
+            }#
+            data <- x$get()#
+            inverse_m <- solve(data, ...)#
+            x$setinverse(inverse_m)#
+            inverse_m#
+}
+xx<-makeCacheMatrix(x)
+cacheSolve(xx)
+makeCacheMatrix <- function(x = matrix()) {#
+            inverse_m <- NULL#
+            set <- function(y) {#
+                    x <<- y#
+                    inverse_m <<- NULL#
+            }#
+            get <- function() x#
+            setinverse <- function(inverse) inverse_m <<- inverse#
+            getinverse <- function() inverse_m#
+            list(set = set, get = get,#
+                 setinverse = setinverse,#
+                 getinverse = getinverse)#
+}#
+## the following function calculating the inverse of a inversible martrix,#
+#
+cacheSolve <- function(x, ...) {#
+        ## Return a matrix that is the inverse of 'x'#
+            inverse_m <- x$getinverse()#
+            if(!is.null(inverse_m)) {#
+                    message("getting cached data")#
+                    return(inverse_m)#
+            }#
+            data <- x$get()#
+            inverse_m <- solve(data, ...)#
+            x$setinverse(inverse_m)#
+            inverse_m#
+}
+makeCacheMatrix
+makeCacheMatrix()
+makeCacheMatrix()$set
+makeCacheMatrix()$x
+x=matrix(3)
+x
+x=matrix(3,2)
+x
+x=matrix(3,2,2)
+x
+x=matrix(data=[1,2,3],2,2)
+x=matrix(data=list[1,2,3],2,2)
+x=matrix(data=list(1,2,3),2,2)
+?matrix
+mdat <- matrix(c(1,2,3, 11,12,13), nrow = 2, ncol = 3,
+)
+x <- matrix(c(1,2,3, 11,12,13), nrow = 2, ncol = 3)
+makeCacheMatrix(x)
+tt<- makeCacheMatrix(x)
+tt$get
+tt$getinverse
+tt.getinverse
+makeCacheMatrix <- function(x = matrix()) {#
+            inverse_m <- NULL#
+            set <- function(y) {#
+                    x <<- y#
+                    inverse_m <<- NULL#
+            }#
+            get <- function() x#
+            setinverse <- function(inverse) inverse_m <<- inverse#
+            getinverse <- function() inverse_m#
+            list(set = set, get = get,#
+                 setinverse = setinverse,#
+                 getinverse = getinverse)#
+}
+test<-makeCacheMatrix
+test<-makeCacheMatrix()
+test
+test$set(x)
+print(test$set(x))
